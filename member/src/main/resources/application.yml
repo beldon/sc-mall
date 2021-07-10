@@ -1,0 +1,6 @@
+server:
+  port: 3200
+
+spring:
+  application:
+    name: member
