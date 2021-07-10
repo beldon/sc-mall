@@ -1,0 +1,28 @@
+server:
+  port: 3120
+spring:
+  application:
+    name: monitor
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        prefer-agent-address: true
+  boot:
+    admin:
+      discovery:
+        ignored-services:
+          - consul
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: ALWAYS
+
