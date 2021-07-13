@@ -1,4 +1,4 @@
 FROM adoptopenjdk/openjdk11:latest
 RUN mkdir /appdata
-COPY target/gateway.jar /appdata
-CMD ["java", "-jar", "/appdata/gateway.jar"]
+COPY target/monitor.jar /appdata
+CMD ["java", "-jar", "/appdata/monitor.jar"]
