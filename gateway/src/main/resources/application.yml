@@ -11,3 +11,11 @@ spring:
       port: ${consul-port:8500}
       discovery:
         prefer-agent-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: NEVER
