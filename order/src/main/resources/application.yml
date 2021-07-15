@@ -6,7 +6,7 @@ spring:
     name: order
   cloud:
     consul:
-      host: ${consul-host:127.0.0.1}
-      port: ${consul-port:8500}
+      host: ${CONSUL-HOST:127.0.0.1}
+      port: ${CONSUL-PORT:8500}
       discovery:
         prefer-agent-address: true
