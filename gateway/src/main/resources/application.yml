@@ -4,3 +4,18 @@ server:
 spring:
   application:
     name: gateway
+
+  cloud:
+    consul:
+      host: ${consul-host:127.0.0.1}
+      port: ${consul-port:8500}
+      discovery:
+        prefer-agent-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: NEVER
